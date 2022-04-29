@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/GustavoLira-ChE/visual-thinking-api/issues"
   },
-  "homepage": "https://github.com/GustavoLira-ChE/visual-thinking-api#readme"
+  "homepage": "https://github.com/GustavoLira-ChE/visual-thinking-api#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "jest": "^26.0.0"
+  }
 }
