@@ -20,13 +20,14 @@ describe("Test for VisualPartnersService class", () => {
             expect(studentsCertificateEmail[i]).toMatch(/@visualpartnership/);
         }
     });
-    test("Requirement test: return a list with student objects whose credits property is =>500", () => {
+    test("Requirement test: return a list with student objects whose credits property is >= score", () => {
         //arrange and act
         const students = Reader.readJsonFile("db/visualpartners.json");
-        const studentsWithCreditsMajor500 = VisualPartnersService.studentsWithCreditsMajor500(students);
+        const minimumCredits = 500;
+        const studentsWithCreditsGreaterThanScore = VisualPartnersService.studentsWithCreditsGreaterThan(students,minimumCredits);
         //assert
-        for(let i = 0; i < studentsWithCreditsMajor500.length; i++){
-            expect(studentsWithCreditsMajor500[i].credits).toBeGreaterThanOrEqual(500);
+        for(let i = 0; i < studentsWithCreditsGreaterThanScore.length; i++){
+            expect(studentsWithCreditsGreaterThanScore[i].credits).toBeGreaterThanOrEqual(minimumCredits);
         }
     });
 });
