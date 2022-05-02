@@ -4,15 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>VisualPartnersAPI</title>
 </head>
 <body>
     <h1>Hello to the Visual Partners API</h1>
-    <p></p>
     <section>
-        <a href="http://localhost:3000/v1/students">Students</a>
-        <a href="http://localhost:3000/v1/students/certificate/email">Students certificate email</a>
-        <a href="http://localhost:3000/v1/students/credits/500">Students with credits greater or equals than 500</a>
+        <article>
+            <h3>Show all students</h3>
+            <p>This link show all the students into database:</p>
+            <p>Endpoint: v1/students/</p>
+            <a href="http://localhost:3000/v1/students">Students</a>
+        </article>
+        <article>
+            <h3>Show the emails of students who has certification</h3>
+            <p>This link show emails:</p>
+            <p>Endpoint: v1/students/certificate/email</p>
+            <a href="http://localhost:3000/v1/students/certificate/email">Students certificate email</a>
+        </article>
+        <article>
+            <h3>Show students filter by the value of credits</h3>
+            <p>In this example 500 is the value minimum of all students</p>
+            <p>Endpoint: v1/students/credits/:value</p>
+            <a href="http://localhost:3000/v1/students/credits/500">Students with a credits value greater or equal than 500</a>
+        </article>
     </section>
+    <footer>
+        <p>Copyrigth 2022 - VisualPartnersAPI</p>
+        <a href="https://github.com/GustavoLira-ChE/visual-thinking-api"><i class="bi bi-github"></i></a>
+    </footer>
 </body>
 </html>
