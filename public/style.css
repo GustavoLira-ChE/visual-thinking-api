@@ -34,6 +34,7 @@ footer{
     max-width: 800px;
     display: flex;
     justify-content: space-between;
+    margin: auto;
 }
 footer i{
     font-size: 50px;
