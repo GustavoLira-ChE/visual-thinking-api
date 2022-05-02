@@ -20,10 +20,11 @@ describe("Test for VisualPartnersController", () => {
     });
     test("Requirement 3. return a list of students whose credits property is greater than or equals than 500", () => {
         //arrange and act
-        const visualPartnersStudentsCreditsGreater500 = VisualPartnersController.getVisualPartnersCreditsGreaterThan500();
+        const credits = 500;
+        const visualPartnersStudentsCreditsGreater500 = VisualPartnersController.getVisualPartnersCreditsGreaterThanCredits(credits);
         //assert
         for(let i = 0; i < visualPartnersStudentsCreditsGreater500.length; i++){
-            expect(visualPartnersStudentsCreditsGreater500[i].credits).toBeGreaterThanOrEqual(500);
+            expect(visualPartnersStudentsCreditsGreater500[i].credits).toBeGreaterThanOrEqual(credits);
         }
     });
 });
