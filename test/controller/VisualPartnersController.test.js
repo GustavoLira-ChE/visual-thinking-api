@@ -11,10 +11,11 @@ describe('Test for VisualPartnersController', () => {
     });
     test("Requirement 2. return a list of visualPartners students that hace a certification property set as true", () => {
         //arrange and act
-        const visualPartnersStudentsCertificate = VisualPartnersController.getVisualPartnersCertificate();
+        const visualPartnersStudentsCertificateEmail = VisualPartnersController.getVisualPartnersCertificate();
         //assert
-        for(let i = 0; i < visualPartnersStudentsCertificate.length; i++){
-            expect(typeof visualPartnersStudentsCertificate[i].haveCertification).toBeTruthy();
+        for(let i = 0; i < visualPartnersStudentsCertificateEmail.length; i++){
+            const expeted = /@/;
+            expect(visualPartnersStudentsCertificateEmail[i].haveCertification).toBe(expect.stringMatching(expeted));
         }
     });
     test("Requirement 3. return a list of students whose credits property is greater than or equals than 500", () => {
