@@ -17,7 +17,7 @@ describe("Test for VisualPartnersService class", () => {
         const studentsCertificateEmail = VisualPartnersService.studentsCertificateEmail(students);
         //assert
         for(let i = 0; i < studentsCertificateEmail.length; i++){
-            expect(studentsCertificateEmail[i].haveCertification()).toBeTruthy(); 
+            expect(studentsCertificateEmail[i]).toMatch(/@visualpartnership/);
         }
     });
     test("Requirement test: return a list with student objects whose credits property is =>500", () => {
